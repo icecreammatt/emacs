@@ -1,17 +1,16 @@
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#3f3f3f" "#cc9393" "#7f9f7f" "#f0dfaf" "#8cd0d3" "#dc8cc3" "#93e0e3" "#dcdccc"])
- '(custom-safe-themes (quote ("009ad81f8ad51f9a520a2e5b754483fe347da50595f0b3e7331810781adefeed" "b867a123865aff06efb8b0ce883ef00cb9eaf12d89bc8087535c8046d43470de" "6d6afc4d4e37583a02055d711ecdd917e6488ab351e9efa5fbbb5b3c88b1f051" "ff6930407fbe02beb2141f0d5e39615b31cf4cacac476bfaf10d4006cd32da75" "f1276848706c3229188f91ae2bf9af5f67a97a6b07111a9b7c797905af31c05b" default)))
- '(fci-rule-color "#383838")
- '(tool-bar-mode nil))
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(gud-gdb-command-name "gdb --annotate=1")
+ '(large-file-warning-threshold nil)
+ '(transient-mark-mode t))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -85,15 +84,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Windows Specific
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(if (eq system-type 'windows-nt)
+    ;; set consolas for windows
+    (set-default-font "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1")
+  
+    ;; set larger font size
+    (set-face-attribute 'default nil :height 150)
 
-;; set consolas for windows
-(set-default-font "-outline-Consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1")
-
-;; set larger font size
-(set-face-attribute 'default nil :height 150)
-
-;; set default directory
-(setq default-directory "C:/users/matt/" )
+    ;; set default directory
+    (setq default-directory "C:/users/matt/" ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Python

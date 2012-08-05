@@ -117,11 +117,11 @@
 (yas/load-directory "~/.emacs.d/plugins/yasnippet/snippets/text-mode")
 
 ;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
 ; Load the default configuration
 (require 'auto-complete-config)
 ; Make sure we can find the dictionaries
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete-1.3.1/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/dict")
 ; Use dictionaries by default
 (setq-default ac-sources (add-to-list 'ac-sources 'ac-source-dictionary))
 (global-auto-complete-mode t)

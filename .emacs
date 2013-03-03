@@ -113,6 +113,8 @@
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas/global-mode 1)
+;; ctrl n and p for menu
+(setq yas/prompt-functions '(yas/x-prompt yas/dropdown-prompt))
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
